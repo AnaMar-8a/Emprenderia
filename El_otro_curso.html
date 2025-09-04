@@ -620,6 +620,7 @@
 
 
             // --- Active Navigation Link highlighting ---
+            // Las siguientes líneas de código se encargan de la "identificación de navegación"
             const sections = document.querySelectorAll('main section');
             const navLinksForScroll = document.querySelectorAll('.nav-links a');
 
@@ -627,7 +628,7 @@
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
-                    if (pageYOffset >= sectionTop - 90) { 
+                    if (window.scrollY >= sectionTop - 90) { 
                         current = section.getAttribute('id');
                     }
                 });
@@ -656,4 +657,3 @@
     </script>
 </body>
 </html>
-
